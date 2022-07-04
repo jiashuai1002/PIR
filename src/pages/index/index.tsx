@@ -6,6 +6,7 @@ import {
   VideoCameraOutlined,
 } from "@ant-design/icons";
 import { Layout, Menu, Button } from "antd";
+import { Footer } from "antd/lib/layout/layout";
 import React, { useState } from "react";
 import "./index.less";
 
@@ -41,7 +42,12 @@ const IndexPage: React.FC = () => {
           ]}
         />
       </Sider>
-      <Layout className="site-layout">
+      <Layout
+        className="site-layout"
+        style={{
+          minHeight: "100vh",
+        }}
+      >
         <Header className="site-layout-background" style={{ padding: 0 }}>
           {React.createElement(
             collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
@@ -61,6 +67,7 @@ const IndexPage: React.FC = () => {
         >
           Content
         </Content>
+        {/* <Footer>12</Footer> */}
       </Layout>
     </Layout>
   );
